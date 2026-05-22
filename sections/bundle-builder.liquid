@@ -54,6 +54,13 @@
   .section-{{ section.id }} {
     background-color: #111;
   }
+  
+  /* CRITICAL FIX: Hide footer email popup that was covering bundle builder content */
+  /* The cw-footer section was rendering above the bundle builder due to z-index stacking */
+  .template-page .section-{{ section.id }} ~ * .cw-footer,
+  body[class*="template-page"] footer .cw-footer {
+    display: none !important;
+  }
 {% endstyle %}
 
 <section class="section-{{ section.id }} color-{{ section.settings.color_scheme }}">
