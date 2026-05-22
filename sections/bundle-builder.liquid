@@ -56,8 +56,9 @@
   }
 {% endstyle %}
 
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+
 <section class="section-{{ section.id }} color-{{ section.settings.color_scheme }}">
-  <div class="section-background color-{{ section.settings.color_scheme }}"></div>
   <bundle-builder-component
     class="bundle-builder"
     data-section-id="{{ section.id }}"
